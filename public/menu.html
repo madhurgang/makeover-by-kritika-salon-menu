@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .menu {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        .no-select {
+            user-select: none;
+        }
+    </style>
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Salon Menu</h1>
+    </header>
+    <div class="menu no-select">
+        <ul>
+            <li>Haircut - $20</li>
+            <li>Manicure - $15</li>
+            <li>Pedicure - $25</li>
+            <li>Facial - $30</li>
+        </ul>
+    </div>
+</body>
+</html>
