@@ -13,8 +13,8 @@ app.get('/generate', async (req, res) => {
     tokens.set(token, expirationTime);
 
     // Construct the URL with the token
-    const menuUrl = `https://madhurgang.github.io/make-over-by-kritika-salon-menu/Menu.html?token=${token}`;
-
+    const menuUrl = `https://madhurgang.github.io/makeover-by-kritika-salon-menu/Menu.html?token=${token}`;
+    console.log('%cindex.js:17 object', 'color: #007acc;', menuUrl, tokens);
     // Set up the QR Code Monkey API request payload
     const qrCodeApiUrl = 'https://api.qrcode-monkey.com/qr/custom';
     const qrCodeConfig = {
@@ -64,7 +64,7 @@ app.get('/validate', (req, res) => {
         return res.status(403).send('Link expired. Please scan the QR code again.');
     }
 
-    res.redirect('https://madhurgang.github.io/make-over-by-kritika-salon-menu/Menu.html'); // Redirect to the menu page
+    res.redirect('https://madhurgang.github.io/makeover-by-kritika-salon-menu/Menu.html'); // Redirect to the menu page
 });
 
 // Start the server
